@@ -1,0 +1,84 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shodh SWC</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'student/style.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Raleway:300,400,600|Playfair+Display" rel="stylesheet">
+   </head>
+  <body>
+    <div class="titles">
+      <img src="{%static 'student/logo.png'%}" alt="">
+      <center>SHODH
+      <p>Portal by IIT Guwahati for Internships under Professors </p></center>
+    </div>
+
+
+    <nav class="navbar bg-dark col-md-2">
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Dash Board</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">Apply</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/profile">Profile</a>
+    </li>
+  </ul>
+  </nav>
+  <div class="data">
+    <p>The Internships you are eligible to apply are: </p>
+    <table style="width:100%">
+ <tr>
+   <th>Department</th>
+   <th>Professor Name</th>
+   <th>Min. CPI Required</th>
+    <th>Title of Intern</th>
+    <th>Skill Set Required</th>
+
+
+ </tr>
+ {% if slist %}
+
+     {% for q in slist %}
+        <tr> <td>{{ q.department_name }}</td>
+         <td><a href="/student/{{ q.id }}/">{{ q.prof_name }}</td>
+         <td>{{ q.min_cpi }}</td>
+         <td>{{ q.title }}</td>
+         <td>{{ q.skills }}</td>
+         <td><button type="button" name="button">Apply</button> </td>
+
+       </tr>
+     {% endfor %}
+
+ {% else %}
+     <p>No intern is available.</p>
+ {% endif %}
+ <div class="container">
+     <div class="row justify-content-center">
+       <div class="col-8">
+         <h1 class="mt-2">Application Form</h1>
+         <hr class="mt-0 mb-4">
+         {% block content %}
+         {% endblock %}
+       </div>
+     </div>
+   </div>
+
+</table>
+
+
+  </div>
+  </body>
+</html>

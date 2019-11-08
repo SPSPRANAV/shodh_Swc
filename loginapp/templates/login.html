@@ -1,0 +1,156 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      
+      .login-page {
+        width: 460px;
+        padding: 2% 0 0;
+        margin: auto;
+      }
+      .form {
+        position: relative;
+        z-index: 1;
+        background : #b8d2d5;
+
+        max-width: 360px;
+        margin: 0 auto 100px;
+        padding: 45px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.0), 0 5px 5px 0 rgba(0, 0, 0, 0.0);
+        border-radius: 8px;
+      }
+      .form input {
+        font-family: "Trebuchet MS", sans-serif,bold;
+        font-color: #ccc;
+        outline: 0;
+        background: transparent;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 20px;
+        font-style: bold;
+      }
+      .form button {
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #4CAF50;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+      }
+      .form button:hover,.form button:active,.form button:focus {
+        background: #43A047;
+      }
+      .form .message {
+        margin: 15px 0 0;
+        color: #909090;
+        font-size: 14px;
+      }
+      .form .message a {
+        color: #4CAF50;
+        text-decoration: none;
+      }
+      
+      .container {
+        position: relative;
+        z-index: 1;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .container:before, .container:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .container .info {
+        margin: 50px auto;
+        text-align: center;
+      }
+      .container .info h1 {
+        margin: 0 0 15px;
+        padding: 0;
+        font-size: 36px;
+        font-weight: 300;
+        color: #1a1a1a;
+      }
+      .container .info span {
+        color: #4d4d4d;
+        font-size: 12px;
+      }
+      .container .info span a {
+        color: #000000;
+        text-decoration: none;
+      }
+      .container .info span .fa {
+        color: #EF3B3A;
+      }
+      
+      .login-msg {
+        margin-bottom: 20px;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      
+      body {
+        background-image: url("http://www.iitg.ac.in/VEDA2018/images/slide_show_images/1.jpg");
+        /* fallback for old browsers */
+        /*background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+        background: -moz-linear-gradient(right, #76b852, #8DC26F);
+        background: -o-linear-gradient(right, #76b852, #8DC26F);
+        background: linear-gradient(to left, #76b852, #8DC26F);
+        */
+        font-family: "Roboto", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        
+      }
+    </style>
+    <title>
+      SWC Shodh Authentication
+    </title>
+  </head>
+  <body>
+    
+    
+    
+    <div class="login-page">
+      <center>
+        <img width=150px src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/1200px-IIT_Guwahati_Logo.svg.png">
+        <h3>
+          User Authentication Required  
+        </h3>
+      </center>
+      <div class="form">
+        <div class="login-msg">
+          <h2>Use IITG Credentials to Login </h2>
+        </div>
+        
+        <form class="login-form" action="/" method="post">
+          <input type="hidden" name="4Tredir" value="https://agnigarh.iitg.ac.in:1442/login?">
+          <input type="hidden" name="magic" value="070580cd1d9d88e9">
+          <input type="hidden" name="" value="">
+          
+          <input name="username" id="ft_un" type="text" autocorrect="off" autocapitalize="off" placeholder="Username">
+          <input name="password" id="ft_pd" type="password" autocomplete="off" placeholder="Password"/>
+          <button>
+            login
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+

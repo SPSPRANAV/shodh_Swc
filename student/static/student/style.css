@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Google+Sans');
+.navbar{
+  position: absolute;
+  width:150px;
+  height:700px;
+  background-color: #ddd;
+}
+.navbar-nav{
+
+position:30px;
+}
+.titles
+{
+  background-color: #008080;
+  font-family:'Montserrat' ,sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color:#fff;
+}
+.data{
+  padding-left: 200px;
+  margin-top: 0px;
+  font-size: 20px;
+  font-family:'Raleway' ,sans-serif;
+
+}
